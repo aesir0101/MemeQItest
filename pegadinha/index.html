@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TESTE DE QI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("Nao");
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</head>
+<body>
+    <div class="painel">
+        <h1>TESTE DE INTELIGÊNCIA!</h1>
+        <img src="https://i.makeagif.com/media/5-12-2016/2nA6Sm.gif">
+        <h2>Você se considera burro?</h2>
+        <a href="https://www.youtube.com/watch?v=ao60cjtN6gg"><button id="Sim">Sim!</button></a>
+        <button onmouseover="fuja()" id="Nao">Não!</button>
+    </div>
+</body>
+</html>
